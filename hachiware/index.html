@@ -34,14 +34,14 @@
         let camera = new THREE.PerspectiveCamera(30, 1);
         const light = new THREE.HemisphereLight(0xffffff, 0xffffbb, 1);
         scene.add(light);
-        camera.position.set(0, 0, 10);
+        camera.position.set(0, 0, 15);
 
         const controls = new OrbitControls(camera, renderer.domElement);
 
         let loader = new GLTFLoader();
-        loader.load("./Hachiware2.gltf", function (gltf) {
+        loader.load("./Hachiware.gltf", function (gltf) {
           scene.add(gltf.scene);
-          gltf.scene.position.set(0.3, -1, 0);
+          gltf.scene.position.set(0, 0, 0);
           gltf.scene.rotation.y = Math.PI; // Y축으로 180도 회전
           renderer.render(scene, camera);
         });
