@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas id="canvas" width="500" height="500">
+      <script type="importmap">
+        {
+          "imports": {
+            "three": "https://unpkg.com/three@0.141.0/build/three.module.js",
+            "GLTFLoader": "https://unpkg.com/three@0.141.0/examples/jsm/loaders/GLTFLoader.js",
+            "OrbitControls": "https://unpkg.com/three@0.141.0/examples/jsm/controls/OrbitControls.js"
+          }
+        }
+      </script>
+      <script type="module">
+        import { GLTFLoader } from "GLTFLoader";
+        import { OrbitControls } from "OrbitControls";
+        import * as THREE from "three";
+
+        let scene = new THREE.Scene();
+        let renderer = new THREE.WebGLRenderer({
+          canvas: document.querySelector("#canvas"),
+          antialias: true,
+        });
+
+        renderer.outputEncoding = THREE.sRGBEncoding;
+
+        scene.background = new THREE.Color(0x91f9ff);
+
+        let camera = new THREE.PerspectiveCamera(30, 1);
+        const light = new THREE.HemisphereLight(0xffffff, 0xffffbb, 1);
+        scene.add(light);
+        camera.position.set(0, 0, 10);
+
+        const controls = new OrbitControls(camera, renderer.domElement);
+
+        let loader = new GLTFLoader();
+        loader.load("./Hachiware2.gltf", function (gltf) {
+          scene.add(gltf.scene);
+          gltf.scene.position.set(0.3, -1, 0);
+          gltf.scene.rotation.y = Math.PI; // Y축으로 180도 회전
+          renderer.render(scene, camera);
+        });
+
+        // 애니메이션 루프
+        function animate() {
+          requestAnimationFrame(animate);
+          controls.update(); // 카메라 업데이트
+          renderer.render(scene, camera); // 씬 렌더링
+        }
+        animate();
+      </script>
+    </canvas>
+    <a href="../index.html" style="text-decoration: none">
+      <button>Go to main page</button>
+    </a>
+  </body>
+</html>
