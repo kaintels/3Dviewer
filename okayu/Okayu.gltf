@@ -1072,7 +1072,7 @@
 				},
 				{
 					"input":141,
-					"interpolation":"LINEAR",
+					"interpolation":"STEP",
 					"output":178
 				},
 				{
@@ -1111,13 +1111,13 @@
 					"output":185
 				},
 				{
-					"input":149,
+					"input":141,
 					"interpolation":"LINEAR",
 					"output":186
 				},
 				{
 					"input":141,
-					"interpolation":"STEP",
+					"interpolation":"LINEAR",
 					"output":187
 				},
 				{
@@ -3566,7 +3566,7 @@
 		{
 			"bufferView":190,
 			"componentType":5126,
-			"count":31,
+			"count":2,
 			"type":"VEC4"
 		},
 		{
@@ -4749,83 +4749,83 @@
 		},
 		{
 			"buffer":0,
-			"byteLength":496,
+			"byteLength":32,
 			"byteOffset":588648
 		},
 		{
 			"buffer":0,
 			"byteLength":24,
-			"byteOffset":589144
+			"byteOffset":588680
 		},
 		{
 			"buffer":0,
 			"byteLength":24,
-			"byteOffset":589168
+			"byteOffset":588704
 		},
 		{
 			"buffer":0,
 			"byteLength":32,
-			"byteOffset":589192
+			"byteOffset":588728
 		},
 		{
 			"buffer":0,
 			"byteLength":24,
-			"byteOffset":589224
+			"byteOffset":588760
 		},
 		{
 			"buffer":0,
 			"byteLength":24,
-			"byteOffset":589248
+			"byteOffset":588784
 		},
 		{
 			"buffer":0,
 			"byteLength":32,
-			"byteOffset":589272
+			"byteOffset":588808
 		},
 		{
 			"buffer":0,
 			"byteLength":24,
-			"byteOffset":589304
+			"byteOffset":588840
 		},
 		{
 			"buffer":0,
 			"byteLength":24,
-			"byteOffset":589328
+			"byteOffset":588864
 		},
 		{
 			"buffer":0,
 			"byteLength":32,
-			"byteOffset":589352
+			"byteOffset":588888
 		},
 		{
 			"buffer":0,
 			"byteLength":24,
-			"byteOffset":589384
+			"byteOffset":588920
 		},
 		{
 			"buffer":0,
 			"byteLength":248,
-			"byteOffset":589408
+			"byteOffset":588944
 		},
 		{
 			"buffer":0,
 			"byteLength":496,
-			"byteOffset":589656
+			"byteOffset":589192
 		},
 		{
 			"buffer":0,
 			"byteLength":372,
-			"byteOffset":590152
+			"byteOffset":589688
 		},
 		{
 			"buffer":0,
 			"byteLength":32,
-			"byteOffset":590524
+			"byteOffset":590060
 		},
 		{
 			"buffer":0,
 			"byteLength":24,
-			"byteOffset":590556
+			"byteOffset":590092
 		}
 	],
 	"samplers":[
@@ -4836,7 +4836,7 @@
 	],
 	"buffers":[
 		{
-			"byteLength":590580,
+			"byteLength":590116,
 			"uri":"Okayu.bin"
 		}
 	]
